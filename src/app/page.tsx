@@ -1,5 +1,6 @@
 "use client";
 
+import "./../styles/globals.css";
 import Link from "next/link";
 import Header from "@/components/Header";
 import { usePathname } from "next/navigation";
@@ -12,7 +13,7 @@ export default function Home() {
     <>
       <head>
         <title>Inicio | Cafetería</title>
-        <link rel="icon" href="web-logo.png" />
+        <link rel="icon" href="web-logo-px.png" />
       </head>
       <Header />
       <main className="flex flex-col items-center justify-center p-6 pt-40">
@@ -101,7 +102,6 @@ export default function Home() {
           </div>
         </section>
       </main>
-      <footer className=""></footer>
     </>
   );
 }

@@ -37,14 +37,14 @@ export default function SimpleCarousel() {
     if (isTransitioning) return;
     setIsTransitioning(true);
     setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
-    setTimeout(() => setIsTransitioning(false), 500);
+    setTimeout(() => setIsTransitioning(false), 300);
   }, [images.length, isTransitioning]);
 
   const prevSlide = useCallback(() => {
     if (isTransitioning) return;
     setIsTransitioning(true);
     setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
-    setTimeout(() => setIsTransitioning(false), 500);
+    setTimeout(() => setIsTransitioning(false), 300);
   }, [images.length, isTransitioning]);
 
   const goToSlide = useCallback(
@@ -52,7 +52,7 @@ export default function SimpleCarousel() {
       if (isTransitioning || index === currentIndex) return;
       setIsTransitioning(true);
       setCurrentIndex(index);
-      setTimeout(() => setIsTransitioning(false), 500);
+      setTimeout(() => setIsTransitioning(false), 300);
     },
     [isTransitioning, currentIndex]
   );
@@ -78,7 +78,7 @@ export default function SimpleCarousel() {
               className={`carousel-image ${
                 loadedImages[index] ? "loaded" : ""
               }`}
-              loading="lazy"
+              loading="eager"
               decoding="async"
             />
           </div>
