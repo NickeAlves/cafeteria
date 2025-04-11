@@ -46,7 +46,7 @@ const Map = ({ tiendas }: MapaProps) => {
 
   return (
     <LoadScript
-      googleMapsApiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY!}
+      googleMapsApiKey={}
       onError={() => setErrorCarga(true)}
       loadingElement={
         <div className="w-full h-full flex items-center justify-center">
@@ -61,7 +61,13 @@ const Map = ({ tiendas }: MapaProps) => {
         options={{
           disableDefaultUI: true,
           zoomControl: true,
+          zoomControlOptions: {
+            position: 5,
+          },
           fullscreenControl: true,
+          fullscreenControlOptions: {
+            position: 5,
+          },
           styles: [
             {
               featureType: "poi",

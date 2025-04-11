@@ -121,13 +121,21 @@ body {
   opacity: 1;
 }
 
+.map-container {
+  position: relative;
+  padding: 12px;
+}
+
 .gm-control-active {
   background-color: white !important;
   border-radius: 4px !important;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1) !important;
-  margin: 10px !important;
   width: 32px !important;
   height: 32px !important;
+}
+
+.gm-style .gm-control-active {
+  margin: 8px !important;
 }
 
 .gm-fullscreen-control,
@@ -145,7 +153,6 @@ body {
   right: 8px !important;
 }
 
-/* Estilo para os marcadores personalizados */
 .gm-style img[src*="coffee-marker.png"] {
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
   transition: transform 0.2s ease;
