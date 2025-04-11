@@ -18,7 +18,7 @@ const centro = {
   lng: -3.699913,
 };
 
-const Mapa = ({ tiendas }: MapaProps) => {
+const Map = ({ tiendas }: MapaProps) => {
   const [errorCarga, setErrorCarga] = useState(false);
 
   if (errorCarga) {
@@ -83,4 +83,4 @@ const Mapa = ({ tiendas }: MapaProps) => {
   );
 };
 
-export default Mapa;
+export default Map;
