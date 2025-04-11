@@ -120,3 +120,37 @@ body {
 .carousel-image.loaded {
   opacity: 1;
 }
+
+.gm-control-active {
+  background-color: white !important;
+  border-radius: 4px !important;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1) !important;
+  margin: 10px !important;
+  width: 32px !important;
+  height: 32px !important;
+}
+
+.gm-fullscreen-control,
+.gm-zoom-control {
+  margin-right: 8px !important;
+}
+
+.gm-style-iw {
+  padding: 12px !important;
+  border-radius: 8px !important;
+}
+
+.gm-style-iw button {
+  top: 8px !important;
+  right: 8px !important;
+}
+
+/* Estilo para os marcadores personalizados */
+.gm-style img[src*="coffee-marker.png"] {
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  transition: transform 0.2s ease;
+}
+
+.gm-style img[src*="coffee-marker.png"]:hover {
+  transform: scale(1.1) translateY(-5px);
+}
