@@ -33,6 +33,7 @@ const Map = ({ tiendas }: MapaProps) => {
             Estamos teniendo problemas para cargar el mapa. Por favor, verifica
             tu conexión a internet.
           </p>
+
           <button
             onClick={() => setErrorCarga(false)}
             className="px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 transition-colors"
@@ -46,7 +47,7 @@ const Map = ({ tiendas }: MapaProps) => {
 
   return (
     <LoadScript
-      googleMapsApiKey={}
+      googleMapsApiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY as string}
       onError={() => setErrorCarga(true)}
       loadingElement={
         <div className="w-full h-full flex items-center justify-center">

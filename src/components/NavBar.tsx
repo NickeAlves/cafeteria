@@ -13,7 +13,7 @@ const NavLinks = () => {
     <>
       <Link
         href="/"
-        className={`p-2 relative overflow-hidden text-white group hover:text-[var(--hover-navBar-text)] hover:duration-300${
+        className={`p-2 relative overflow-hidden text-white group hover:duration-300${
           pathname === "/" ? "text-white" : "text-white"
         }`}
       >
@@ -26,7 +26,7 @@ const NavLinks = () => {
       </Link>
       <Link
         href="/carta"
-        className={`font-sans p-2 relative overflow-hidden text-white group hover:text-[var(--hover-navBar-text)] hover:duration-300${
+        className={`font-sans p-2 relative overflow-hidden text-white group hover:duration-300${
           pathname === "/carta" ? "text-white" : "text-white"
         }`}
       >
@@ -38,8 +38,21 @@ const NavLinks = () => {
         ></span>
       </Link>
       <Link
+        href="/#tiendas"
+        className={`font-sans p-2 relative overflow-hidden group hover:duration-300 ${
+          pathname === "/#tiendas" ? "text-white" : "text-white"
+        }`}
+      >
+        Tíendas
+        <span
+          className={`absolute left-0 bottom-0 h-0.5 bg-white transition-all duration-300 ${
+            pathname === "/#tiendas" ? "w-full" : "w-0 group-hover:w-full"
+          }`}
+        ></span>
+      </Link>
+      <Link
         href="/contacto"
-        className={`font-sans p-2 relative overflow-hidden group hover:text-[var(--hover-navBar-text)] hover:duration-300 ${
+        className={`font-sans p-2 relative overflow-hidden group hover:duration-300 ${
           pathname === "/contacto" ? "text-white" : "text-white"
         }`}
       >
@@ -79,13 +92,15 @@ const NavBar = () => {
     <>
       <nav
         className={`w-full fixed top-0 left-0 z-50 transition-colors duration-300 ${
-          isScrolled ? " backdrop-blur-sm" : "bg-[var(--brown-color)]"
+          isScrolled
+            ? "bg-[var(--hover-brown-color)]"
+            : "bg-[var(--brown-color)]"
         }`}
       >
         <div className="container mx-auto flex justify-between items-center px-6 md:px-12">
           <Link href={"/"}>
             <img
-              src="./logo.png"
+              src="/logo.png"
               alt="photo"
               className="rounded-full w-20 h-20 hover:scale-75 duration-300"
             />

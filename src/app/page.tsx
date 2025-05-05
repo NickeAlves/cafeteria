@@ -43,13 +43,8 @@ export default function Home() {
   return (
     <>
       <head>
-        <title>Inicio | Cafetería ®</title>
-        <link rel="icon" href="web-logo-px.png" />
-        <meta
-          name="description"
-          content="Cafetería ® - Café de especialidad en Burgos con más de un siglo de tradición"
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Inicio | Cafetería</title>
+        <link rel="icon" href="./web-logo.png" />
       </head>
 
       <Header />
@@ -62,21 +57,21 @@ export default function Home() {
             className="w-full h-full object-cover rounded-xl"
             loading="eager"
           />
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 sm:left-4 sm:-translate-x-0 text-white text-center sm:text-left max-w-[90%] sm:max-w-md flex flex-col items-center sm:items-start gap-4">
-            <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extralight text-white drop-shadow-[0_2px_2px_rgba(0,0,0,0.5)] sm:drop-shadow-[0_3px_3px_rgba(0,0,0,0.5)] md:drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)] lg:drop-shadow-[0_5px_5px_rgba(0,0,0,0.6)]">
-              Café acogedor con aroma único y sabores que enamoran.
-            </h1>
-          </div>
-          <div className="absolute top-3/4 sm:top-1/3 left-1/2 transform -translate-x-1/2 sm:left-auto sm:right-6 sm:translate-x-0 flex flex-col sm:flex-row items-center gap-4">
-            <img
-              src="logo.png"
-              alt="Logo Cafetería ®"
-              className="w-24 h-24 sm:w-32 sm:h-32 lg:w-36 lg:h-36 rounded-full shadow-lg"
-              loading="eager"
-            />
-            <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white">
-              Cafetería ®
-            </h1>
+          <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 px-6 text-white text-center">
+            <div className="max-w-md">
+              <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold drop-shadow-[0_2px_2px_rgba(0,0,0,0.5)] sm:drop-shadow-[0_3px_3px_rgba(0,0,0,0.5)] md:drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)] lg:drop-shadow-[0_5px_5px_rgba(0,0,0,0.6)] uppercase">
+                Café acogedor con aroma único y sabores que enamoran.
+              </h1>
+            </div>
+
+            <div className="flex flex-col items-center gap-2">
+              <img
+                src="logo.png"
+                alt="Logo Cafetería ®"
+                className="w-20 h-20 sm:w-28 sm:h-28 lg:w-32 lg:h-32 rounded-full shadow-lg"
+                loading="eager"
+              />
+            </div>
           </div>
         </div>
 
@@ -85,7 +80,7 @@ export default function Home() {
           className="flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 py-12 gap-6 w-full max-w-7xl"
         >
           <h1 className="font-bold text-xl sm:text-2xl md:text-3xl">
-            - Nuestros productos -
+            Nuestros productos
           </h1>
           <CarouselProducts />
           <p className="font-extralight text-sm sm:text-base md:text-lg text-center max-w-3xl mx-auto">
@@ -102,7 +97,7 @@ export default function Home() {
             }`}
             aria-label="Ver nuestra carta completa"
           >
-            Descubre más
+            Descubre nuestra carta
           </Link>
         </section>
 
